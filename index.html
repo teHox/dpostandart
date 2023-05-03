@@ -1,0 +1,2195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Main</title>
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.0/dist/jquery.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-contacts">
+				<div class="container f-center-jcsb">
+					<div class="header-contacts__wrap f-center">
+						<div class="header-contacts__city f-center">
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 18 18"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M15.75 7.5C15.75 12.75 9 17.25 9 17.25C9 17.25 2.25 12.75 2.25 7.5C2.25 5.70979 2.96116 3.9929 4.22703 2.72703C5.4929 1.46116 7.20979 0.75 9 0.75C10.7902 0.75 12.5071 1.46116 13.773 2.72703C15.0388 3.9929 15.75 5.70979 15.75 7.5Z"
+									stroke="black"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+								<path
+									d="M9 9.75C10.2426 9.75 11.25 8.74264 11.25 7.5C11.25 6.25736 10.2426 5.25 9 5.25C7.75736 5.25 6.75 6.25736 6.75 7.5C6.75 8.74264 7.75736 9.75 9 9.75Z"
+									stroke="black"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+							</svg>
+							<p class="header-contacts__point">Россия</p>
+						</div>
+						<p class="header-contacts__point">Лицензия №037166 от 24.02.2016</p>
+					</div>
+					<div class="header-list f-center">
+						<div class="header-list__item f-center">
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 18 18"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+									stroke="black"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+								<path
+									d="M9 4.5V9L12 10.5"
+									stroke="black"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+							</svg>
+							<p class="header-contacts__point">Понедельник– Пятница</p>
+						</div>
+						<div class="header-list__item f-center">
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 18 18"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M16.5001 12.6901V14.9401C16.5009 15.1489 16.4581 15.3557 16.3745 15.5471C16.2908 15.7385 16.168 15.9103 16.0141 16.0515C15.8602 16.1927 15.6785 16.3002 15.4806 16.3671C15.2828 16.434 15.0731 16.4589 14.8651 16.4401C12.5572 16.1893 10.3403 15.4007 8.39257 14.1376C6.58044 12.9861 5.04407 11.4497 3.89257 9.63757C2.62506 7.68098 1.83625 5.45332 1.59007 3.13507C1.57133 2.92767 1.59598 2.71864 1.66245 2.52129C1.72892 2.32394 1.83575 2.14259 1.97615 1.98879C2.11654 1.83499 2.28743 1.7121 2.47792 1.62796C2.6684 1.54382 2.87433 1.50027 3.08257 1.50007H5.33257C5.69655 1.49649 6.04942 1.62538 6.32539 1.86272C6.60137 2.10006 6.78163 2.42966 6.83257 2.79007C6.92754 3.51012 7.10366 4.21712 7.35757 4.89757C7.45848 5.16602 7.48032 5.45776 7.4205 5.73823C7.36069 6.01871 7.22172 6.27616 7.02007 6.48007L6.06757 7.43257C7.13524 9.31023 8.68991 10.8649 10.5676 11.9326L11.5201 10.9801C11.724 10.7784 11.9814 10.6395 12.2619 10.5796C12.5424 10.5198 12.8341 10.5417 13.1026 10.6426C13.783 10.8965 14.49 11.0726 15.2101 11.1676C15.5744 11.219 15.9071 11.4025 16.145 11.6832C16.3828 11.9639 16.5092 12.3223 16.5001 12.6901Z"
+									stroke="black"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+							</svg>
+							<a href="tel:+74952121234" class="header-contacts__point">
+								+7 (495) 212 12 34
+							</a>
+						</div>
+						<div class="header-list__item f-center">
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 18 18"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M3 3H15C15.825 3 16.5 3.675 16.5 4.5V13.5C16.5 14.325 15.825 15 15 15H3C2.175 15 1.5 14.325 1.5 13.5V4.5C1.5 3.675 2.175 3 3 3Z"
+									stroke="black"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+								<path
+									d="M16.5 4.5L9 9.75L1.5 4.5"
+									stroke="black"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+							</svg>
+							<a
+								href="mailto:info@dpostandart.ru"
+								class="header-contacts__point"
+							>
+								info@dpostandart.ru
+							</a>
+						</div>
+					</div>
+					<button type="button" class="header-filter f-center-center">
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"
+								stroke="black"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></path>
+							<path
+								d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+								stroke="black"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></path>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="header-wrapper">
+				<div class="container f-center">
+					<div class="header-inner f-center-jcsb">
+						<div class="header-inner__wrap f-center">
+							<div class="header-logo f-center-center">
+								<a href="/" class="header-logo__link">
+									<img src="assets/img/logo.png" alt="" />
+								</a>
+							</div>
+							<p class="header-inner__text">Лицензия №037166 от 24.02.2016</p>
+						</div>
+						<div class="header-toggle">
+							<svg
+								width="20"
+								height="18"
+								viewBox="0 0 20 18"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<rect width="20" height="2" rx="1" fill="black"></rect>
+								<rect y="8" width="20" height="2" rx="1" fill="black"></rect>
+								<rect y="16" width="20" height="2" rx="1" fill="black"></rect>
+							</svg>
+						</div>
+					</div>
+					<div class="header-wrapper__block">
+						<div class="header-wrapper__top f-center-jcsb">
+							<nav class="header-nav">
+								<ul class="header-menu f-center">
+									<li class="header-menu__item">
+										<a href="/" class="header-menu__link"> О НАС </a>
+									</li>
+									<li class="header-menu__item">
+										<a href="/" class="header-menu__link"> КУРСЫ </a>
+									</li>
+									<li class="header-menu__item">
+										<a href="/" class="header-menu__link"> ВЕБИНАРЫ </a>
+									</li>
+									<li class="header-menu__item">
+										<a href="/" class="header-menu__link"> СОТРУДНИЧЕСТВО </a>
+									</li>
+									<li class="header-menu__item">
+										<a href="/" class="header-menu__link"> ЛЕНТА </a>
+									</li>
+									<li class="header-menu__item">
+										<a href="/" class="header-menu__link"> КОНТАКТЫ </a>
+									</li>
+								</ul>
+							</nav>
+							<div class="header-btns f-center">
+								<a
+									href="https://moodledpo.sistele.com/login/index.php"
+									onclick="ym(56296366,'reachGoal','distans_obuchenie'); return true;"
+									class="header-btns__item main-btn"
+									target="_blank"
+								>
+									Дистанционное обучение
+								</a>
+								<button
+									type="button"
+									onclick="ym(56296366,'reachGoal','podat_zayavku_online'); return true;"
+									class="header-btns__item main-btn main-btn_accent consult-btn"
+								>
+									ПОДАТЬ ЗАЯВКУ ОНЛАЙН
+								</button>
+							</div>
+						</div>
+						<div class="header-wrapper__bottom">
+							<div class="header-category f-center-jcsb">
+								<div class="header-category__item">
+									<a
+										href="/uslugi/perepodgotovka"
+										class="header-category__link"
+									>
+										Профессиональная переподготовка
+									</a>
+								</div>
+								<div class="header-category__item">
+									<a
+										href="/uslugi/povyishenie-kvalifikacz"
+										class="header-category__link"
+									>
+										Повышение квалификации
+									</a>
+								</div>
+								<div class="header-category__item">
+									<a
+										href="/uslugi/prochie-uslugi"
+										class="header-category__link"
+									>
+										Прочие услуги
+									</a>
+								</div>
+								<div class="header-category__item">
+									<a
+										href="/uslugi/oxrana-truda-i-pozharno-texnicheskij-minimum"
+										class="header-category__link"
+									>
+										Охрана труда и птм
+									</a>
+								</div>
+								<div class="header-category__item">
+									<a
+										href="/uslugi/rabochie-speczialnosti"
+										class="header-category__link"
+									>
+										Рабочие специальности
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="burger" class="burger-btn"><span></span></div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="main">
+				<div class="container">
+					<div class="main-wrapper f-jcsb">
+						<div class="main-wrapper__wrapper">
+							<div class="serchwrap">
+								<div class="serchwrapshhid">
+									<form class="simplesearch-search-form well msearch2">
+										<fieldset>
+											<input
+												type="text"
+												name="query"
+												id="search"
+												placeholder="Введите ключевое слово / фразу"
+												value=""
+												required=""
+												class="ui-autocomplete-input"
+												autocomplete="off"
+											/>
+
+											<input type="submit" value="Поиск" />
+										</fieldset>
+									</form>
+								</div>
+							</div>
+							<div class="main-slider swiper">
+								<div class="main-slider__wrapper swiper-wrapper">
+									<div class="main-slider__item swiper-slide">
+										<div class="main-slider__content">
+											<h1 class="main-slider__title">
+												<b>ОХРАНА ТРУДА</b> новый порядок обучения
+											</h1>
+											<p class="main-slider__text main-slider__text_border">
+												Наш учебные центр аттестован и состоит в реестре
+												аккредитованных организаций, оказывающих услуги в
+												области охраны труда
+											</p>
+											<p class="main-slider__text">
+												Пройди обязательное обучение для работников и
+												руководителей по новым правилам Постановление
+												Правительства от 24.12.2021 №2464
+											</p>
+											<div class="main-slider__buttons">
+												<button
+													type="button"
+													class="
+														main-slider__link
+														main-btn main-btn_accent
+														consult-btn
+													"
+													onclick="ym(56296366,'reachGoal','glavnaya_oformit_zayavku'); return true;"
+													tabindex="0"
+												>
+													Подать заявку на обучение
+												</button>
+												<button
+													type="button"
+													class="
+														main-slider__link
+														main-btn main-btn_accent
+														consult-btn
+													"
+													onclick="ym(56296366,'reachGoal','glavnaya_oformit_zayavku'); return true;"
+													tabindex="0"
+												>
+													Проверить знания
+												</button>
+											</div>
+										</div>
+										<div class="main-slider__image">
+											<img src="assets/img/main-image.png" alt="" />
+										</div>
+
+										<div class="main-slider__logo">
+											<img src="assets/img/main-logo.svg" alt="" />
+										</div>
+									</div>
+									<div class="main-slider__item swiper-slide">
+										<div class="main-slider__content">
+											<h2 class="main-slider__title">
+												<b>ОХРАНА ТРУДА</b> новый порядок обучения
+											</h2>
+											<p class="main-slider__text main-slider__text_border">
+												Наш учебные центр аттестован и состоит в реестре
+												аккредитованных организаций, оказывающих услуги в
+												области охраны труда
+											</p>
+											<p class="main-slider__text">
+												Пройди обязательное обучение для работников и
+												руководителей по новым правилам Постановление
+												Правительства от 24.12.2021 №2464
+											</p>
+											<div class="main-slider__buttons">
+												<button
+													type="button"
+													class="
+														main-slider__link
+														main-btn main-btn_accent
+														consult-btn
+													"
+													onclick="ym(56296366,'reachGoal','glavnaya_oformit_zayavku'); return true;"
+													tabindex="0"
+												>
+													Подать заявку на обучение
+												</button>
+												<button
+													type="button"
+													class="
+														main-slider__link
+														main-btn main-btn_accent
+														consult-btn
+													"
+													onclick="ym(56296366,'reachGoal','glavnaya_oformit_zayavku'); return true;"
+													tabindex="0"
+												>
+													Проверить знания
+												</button>
+											</div>
+										</div>
+										<div class="main-slider__image">
+											<img src="assets/img/main-image.png" alt="" />
+										</div>
+
+										<div class="main-slider__logo">
+											<img src="assets/img/main-logo.svg" alt="" />
+										</div>
+									</div>
+									<div class="main-slider__item swiper-slide">
+										<div class="main-slider__content">
+											<h2 class="main-slider__title">
+												<b>ОХРАНА ТРУДА</b> новый порядок обучения
+											</h2>
+											<p class="main-slider__text main-slider__text_border">
+												Наш учебные центр аттестован и состоит в реестре
+												аккредитованных организаций, оказывающих услуги в
+												области охраны труда
+											</p>
+											<p class="main-slider__text">
+												Пройди обязательное обучение для работников и
+												руководителей по новым правилам Постановление
+												Правительства от 24.12.2021 №2464
+											</p>
+											<div class="main-slider__buttons">
+												<button
+													type="button"
+													class="
+														main-slider__link
+														main-btn main-btn_accent
+														consult-btn
+													"
+													onclick="ym(56296366,'reachGoal','glavnaya_oformit_zayavku'); return true;"
+													tabindex="0"
+												>
+													Подать заявку на обучение
+												</button>
+												<button
+													type="button"
+													class="
+														main-slider__link
+														main-btn main-btn_accent
+														consult-btn
+													"
+													onclick="ym(56296366,'reachGoal','glavnaya_oformit_zayavku'); return true;"
+													tabindex="0"
+												>
+													Проверить знания
+												</button>
+											</div>
+										</div>
+										<div class="main-slider__image">
+											<img src="assets/img/main-image.png" alt="" />
+										</div>
+
+										<div class="main-slider__logo">
+											<img src="assets/img/main-logo.svg" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="main-slider__pagination swiper-pagination"></div>
+							</div>
+						</div>
+						<div class="main-event__slider swiper">
+							<div class="main-event__wrapper swiper-wrapper">
+								<div class="main-event swiper-slide">
+									<h2 class="main-event__title">НОВОСТИ</h2>
+									<div class="main-event__image">
+										<img src="assets/img/news.png" alt="" />
+									</div>
+									<h3 class="main-event__sub-title">
+										Иностранные врачи больше не имеют право работать
+									</h3>
+									<p class="main-event__text">
+										Правила допуска к работе коснулись врачей с иностранными
+										дипломами. Теперь, чтобы пройти аккредитацию иностранным
+									</p>
+									<a href="" class="main-event__link main-btn main-btn_accent">
+										Читать подробнее
+									</a>
+								</div>
+								<div class="main-event swiper-slide">
+									<h2 class="main-event__title">НОВОСТИ</h2>
+									<div class="main-event__image">
+										<img src="assets/img/news.png" alt="" />
+									</div>
+									<h3 class="main-event__sub-title">
+										Иностранные врачи больше не имеют право работать
+									</h3>
+									<p class="main-event__text">
+										Правила допуска к работе коснулись врачей с иностранными
+										дипломами. Теперь, чтобы пройти аккредитацию иностранным
+									</p>
+									<a href="" class="main-event__link main-btn main-btn_accent">
+										Читать подробнее
+									</a>
+								</div>
+								<div class="main-event swiper-slide">
+									<h2 class="main-event__title">НОВОСТИ</h2>
+									<div class="main-event__image">
+										<img src="assets/img/news.png" alt="" />
+									</div>
+									<h3 class="main-event__sub-title">
+										Иностранные врачи больше не имеют право работать
+									</h3>
+									<p class="main-event__text">
+										Правила допуска к работе коснулись врачей с иностранными
+										дипломами. Теперь, чтобы пройти аккредитацию иностранным
+									</p>
+									<a href="" class="main-event__link main-btn main-btn_accent">
+										Читать подробнее
+									</a>
+								</div>
+								<div class="main-event swiper-slide">
+									<h2 class="main-event__title">НОВОСТИ</h2>
+									<div class="main-event__image">
+										<img src="assets/img/news.png" alt="" />
+									</div>
+									<h3 class="main-event__sub-title">
+										Иностранные врачи больше не имеют право работать
+									</h3>
+									<p class="main-event__text">
+										Правила допуска к работе коснулись врачей с иностранными
+										дипломами. Теперь, чтобы пройти аккредитацию иностранным
+									</p>
+									<a href="" class="main-event__link main-btn main-btn_accent">
+										Читать подробнее
+									</a>
+								</div>
+							</div>
+							<div class="main-event__pagination swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="category">
+				<div class="category-inner tabs">
+					<div class="container">
+						<div class="section-content">
+							<h2 class="section-content__title">
+								Выбирайте нужное из направлений
+							</h2>
+						</div>
+						<div class="category-block tabs__nav">
+							<ul class="category-list f-center">
+								<li class="category-list__item tabs__btn tabs__btn_active">
+									<a href="#category-38" class="category-list__link">
+										Профессиональная переподготовка
+									</a>
+								</li>
+								<li class="category-list__item tabs__btn">
+									<a href="#category-13" class="category-list__link">
+										Повышение квалификации
+									</a>
+								</li>
+								<li class="category-list__item tabs__btn">
+									<a href="#category-62" class="category-list__link">
+										Охрана труда и пожарно-технический минимум
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="container">
+						<div class="category-wrapper">
+							<div class="category-item tabs__content">
+								<div class="category-slider swiper tabs__pane tabs__pane_show">
+									<div class="swiper-wrapper">
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Здравоохранение
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Здравоохранение
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Здравоохранение
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Здравоохранение
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Здравоохранение
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Здравоохранение
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Здравоохранение
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="category-slider swiper tabs__pane">
+									<div class="swiper-wrapper">
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction2.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Педагогика
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction2.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Педагогика
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction2.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Педагогика
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction2.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Педагогика
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction2.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Педагогика
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction2.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Педагогика
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction2.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Педагогика
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="category-slider swiper tabs__pane">
+									<div class="swiper-wrapper">
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction3.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Ветеринария
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction3.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Ветеринария
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction3.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Ветеринария
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction3.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Ветеринария
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction3.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Ветеринария
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction3.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Ветеринария
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="category-slider__item swiper-slide">
+											<div class="category-slider__card">
+												<div class="category-slider__image">
+													<img src="assets/img/direction3.png" alt="" />
+												</div>
+												<div class="category-slider__content">
+													<a href="/" class="category-slider__btn">
+														Ветеринария
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a
+									href="uslugi/perepodgotovka"
+									class="category-item__more f-center"
+								>
+									Показать все курсы обучения
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about">
+				<div class="container">
+					<div class="about-block">
+						<div class="about-block__wrapper f-center-jcsb">
+							<div class="section-content about-content">
+								<h2 class="section-content__title">
+									О нашем<br />
+									учебном центре
+								</h2>
+								<p class="section-content__text">
+									Образовательный стандарт занимает лидирующие позиции в сфере
+									дополнительного образования, благодаря многолетнему опыту и
+									собственным методикам образования.
+								</p>
+
+								<a href="/osnovnyie-svedeniya" class="about-content__btn">
+									Подробнее
+								</a>
+							</div>
+							<div class="about-block__offer">
+								<div class="about-block__logo">
+									<img src="assets/img/about-logo.png" alt="" />
+								</div>
+								<button onclick="openYoutube()" class="about-block__video">
+									<img src="assets/img/about-video.png" alt="" />
+								</button>
+							</div>
+						</div>
+						<ul class="about-list f-center-jcsb">
+							<li class="about-list__item f-center">
+								<div class="about-list__image f-center-center">
+									<img src="assets/img/about-list-1.svg" alt="" />
+								</div>
+								<div class="about-list__content">
+									<p class="about-list__count">153 650 +</p>
+									<p class="about-list__text">Прошли обучение</p>
+								</div>
+							</li>
+
+							<li class="about-list__item f-center">
+								<div class="about-list__image f-center-center">
+									<img src="assets/img/about-list-2.svg" alt="" />
+								</div>
+								<div class="about-list__content">
+									<p class="about-list__count">2 730 +</p>
+									<p class="about-list__text">Программ обучения</p>
+								</div>
+							</li>
+
+							<li class="about-list__item f-center">
+								<div class="about-list__image f-center-center">
+									<img src="assets/img/about-list-3.svg" alt="" />
+								</div>
+								<div class="about-list__content">
+									<p class="about-list__count">22 350 +</p>
+									<p class="about-list__text">Контрактов с организациями</p>
+								</div>
+							</li>
+
+							<li class="about-list__item f-center">
+								<div class="about-list__image f-center-center">
+									<img src="assets/img/about-list-4.svg" alt="" />
+								</div>
+								<div class="about-list__content">
+									<p class="about-list__count">290 +</p>
+									<p class="about-list__text">Партнеров</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="info">
+				<div class="container">
+					<div class="info-wrapper f-jcsb">
+						<div class="info-image">
+							<img src="assets/img/info-image.jpg" alt="" />
+						</div>
+						<div class="info-block">
+							<div class="section-content info-content">
+								<h2 class="section-content__title">Что мы делаем?</h2>
+								<p class="section-content__text">
+									Мы понимаем, что очные занятия не всегда удобны для работающих
+									людей, а потому предлагаем заочную форму с применением
+									технологий дистанционного обучения. Ваши сотрудники
+									ознакомятся с новыми направлениями и тенденциями в их
+									профессии без отрыва от работы. Но, при желании, если
+									наберется группа специалистов, мы проведем обучение и в очной
+									форме.
+								</p>
+							</div>
+							<div class="info-block__more">
+								<h3 class="section-content__title">Что вы получаете:</h3>
+								<ul class="info-list">
+									<li class="info-list__item f-center">
+										<div class="info-list__check f-center-center">
+											<svg
+												width="19"
+												height="15"
+												viewBox="0 0 19 15"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M17.9596 1.9375L6.84505 13.0521L1.79297 8"
+													stroke="black"
+													stroke-width="2.02083"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												></path>
+											</svg>
+										</div>
+										<p class="info-list__text">
+											Легитимные документы, подтверждающие уровень квалификации
+											специалиста (действуют на всей территории РФ)
+										</p>
+									</li>
+
+									<li class="info-list__item f-center">
+										<div class="info-list__check f-center-center">
+											<svg
+												width="19"
+												height="15"
+												viewBox="0 0 19 15"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M17.9596 1.9375L6.84505 13.0521L1.79297 8"
+													stroke="black"
+													stroke-width="2.02083"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												></path>
+											</svg>
+										</div>
+										<p class="info-list__text">
+											Повышение квалификации ваших кадров
+										</p>
+									</li>
+
+									<li class="info-list__item f-center">
+										<div class="info-list__check f-center-center">
+											<svg
+												width="19"
+												height="15"
+												viewBox="0 0 19 15"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M17.9596 1.9375L6.84505 13.0521L1.79297 8"
+													stroke="black"
+													stroke-width="2.02083"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												></path>
+											</svg>
+										</div>
+										<p class="info-list__text">
+											Углубленные знания по профессии
+										</p>
+									</li>
+
+									<li class="info-list__item f-center">
+										<div class="info-list__check f-center-center">
+											<svg
+												width="19"
+												height="15"
+												viewBox="0 0 19 15"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M17.9596 1.9375L6.84505 13.0521L1.79297 8"
+													stroke="black"
+													stroke-width="2.02083"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												></path>
+											</svg>
+										</div>
+										<p class="info-list__text">
+											Квалифицированную помощь по требованиям РФ к допуску на
+											работу
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="advantages">
+				<div class="container">
+					<div class="advantages-content section-content">
+						<h2 class="section-content__title">Почему выбирают нас?</h2>
+					</div>
+					<ul class="advantages-list f-jcsb">
+						<li class="advantages-list__item f-center">
+							<div class="advantages-list__icon f-center-center">
+								<img src="assets/img/advantages-1.svg" alt="" />
+							</div>
+							<p class="advantages-list__text">
+								Вносим в Федеральный реестр дополнительного образования
+							</p>
+						</li>
+
+						<li class="advantages-list__item f-center">
+							<div class="advantages-list__icon f-center-center">
+								<img src="assets/img/advantages-2.svg" alt="" />
+							</div>
+							<p class="advantages-list__text">
+								Собственный <br />учебно-методический отдел
+							</p>
+						</li>
+
+						<li class="advantages-list__item f-center">
+							<div class="advantages-list__icon f-center-center">
+								<img src="assets/img/advantages-3.svg" alt="" />
+							</div>
+							<p class="advantages-list__text">
+								Максимально короткие сроки обучения за счет внедрения новых
+								технологий
+							</p>
+						</li>
+
+						<li class="advantages-list__item f-center">
+							<div class="advantages-list__icon f-center-center">
+								<img src="assets/img/advantages-4.svg" alt="" />
+							</div>
+							<p class="advantages-list__text">
+								Более 120 преподавателей и методистов разрабатывают наши
+								программы
+							</p>
+						</li>
+
+						<li class="advantages-list__item f-center">
+							<div class="advantages-list__icon f-center-center">
+								<img src="assets/img/advantages-5.svg" alt="" />
+							</div>
+							<p class="advantages-list__text">
+								Обучение без отрыва от рабочего места или от производства
+							</p>
+						</li>
+
+						<li class="advantages-list__item f-center">
+							<div class="advantages-list__icon f-center-center">
+								<img src="assets/img/advantages-6.svg" alt="" />
+							</div>
+							<p class="advantages-list__text">
+								Более 1500 программ обучения, повышения квалификации и
+								профессионально переподготовки
+							</p>
+						</li>
+
+						<li class="advantages-list__item f-center">
+							<div class="advantages-list__icon f-center-center">
+								<img src="assets/img/advantages-7.svg" alt="" />
+							</div>
+							<p class="advantages-list__text">
+								Выделяем<br />
+								профессионального куратора
+							</p>
+						</li>
+
+						<li class="advantages-list__item f-center">
+							<div class="advantages-list__icon f-center-center">
+								<img src="assets/img/advantages-8.svg" alt="" />
+							</div>
+							<p class="advantages-list__text">
+								Индивидуальный<br />
+								график обучения
+							</p>
+						</li>
+
+						<li class="advantages-list__item f-center">
+							<div class="advantages-list__icon f-center-center">
+								<img src="assets/img/advantages-9.svg" alt="" />
+							</div>
+							<p class="advantages-list__text">
+								Собственные<br />
+								учебные классы
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="licenses licenses-simple">
+				<div class="container">
+					<div class="licenses-wrapper f-jcsb">
+						<div class="licenses-info">
+							<h2 class="licenses-title">Лицензия</h2>
+							<div class="licenses-block flex">
+								<a
+									href="images/page/1/Реестровая%20выписка.pdf"
+									class="licenses-block__image"
+								>
+									<img src="assets/img/licenses-image.jpg" alt="Лицензия" />
+								</a>
+								<div class="licenses-block__content">
+									<p class="licenses-block__text">
+										Лицензия № 037166 от 24 февраля 2016 г. на осуществление
+										образовательной деятельности<br />
+										Настоящая лицензия предоставлена Обществу с ограниченной
+										ответственностью Многопрофильному Учебному Центру
+										Дополнительного Профессионального образования
+										“Образовательный стандарт” (ООО МУЦ ДПО “Образовательный
+										стандарт” ) Общество с ограниченной ответственностью на
+										право оказывать образовательные услуги по реализации
+										образовательных программ по видам образования, по уровням
+										образования, по профессиям, специальностям, направлениям
+										подготовки (для профессионального образования), по подвидам
+										дополнительного образования, указанным в приложении к
+										настоящей лицензии.
+										<br /><br />
+										Основной государственный регистрационный номер юридического
+										лица (индивидуального предпринимателя) (ОГРН) 1157746882182
+										Идентификационный номер налогоплательщика 7725289953
+									</p>
+									<a
+										href="https://data.mos.ru/opendata/7719028495-reestr-litsenziy-na-obrazovatelnuyu-deyatelnost-vydannyh-organami-ispolnitelnoy-vlasti"
+										class="licenses-block__btn main-btn main-btn_blue"
+										target="_blank"
+									>
+										Проверить лицензию
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="licenses-inner">
+							<h2 class="licenses-title">Благодарственные письма</h2>
+							<div class="licenses-inner__buttons">
+								<div class="licenses-inner__prev">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="38"
+										height="38"
+										fill="currentColor"
+										class="bi bi-arrow-left-circle-fill"
+										viewBox="0 0 16 16"
+									>
+										<path
+											d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+										/>
+									</svg>
+								</div>
+								<div class="licenses-inner__next">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="38"
+										height="38"
+										fill="currentColor"
+										class="bi bi-arrow-right-circle-fill"
+										viewBox="0 0 16 16"
+									>
+										<path
+											d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+										/>
+									</svg>
+								</div>
+							</div>
+							<div class="licenses-slider swiper">
+								<div class="licenses-slider__wrapper swiper-wrapper imglist">
+									<div class="licenses-slider__slide swiper-slide">
+										<a
+											href="assets/img/docs1.jpg"
+											data-fancybox="group"
+											data-caption="This image has a caption 1"
+										>
+											<img src="assets/img/docs1.jpg" />
+										</a>
+									</div>
+									<div class="licenses-slider__slide swiper-slide">
+										<a
+											href="assets/img/docs1.jpg"
+											data-fancybox="group"
+											data-caption="This image has a caption 1"
+										>
+											<img src="assets/img/docs1.jpg" />
+										</a>
+									</div>
+									<div class="licenses-slider__slide swiper-slide">
+										<a
+											href="assets/img/docs1.jpg"
+											data-fancybox="group"
+											data-caption="This image has a caption 1"
+										>
+											<img src="assets/img/docs1.jpg" />
+										</a>
+									</div>
+									<div class="licenses-slider__slide swiper-slide">
+										<a
+											href="assets/img/docs1.jpg"
+											data-fancybox="group"
+											data-caption="This image has a caption 1"
+										>
+											<img src="assets/img/docs1.jpg" />
+										</a>
+									</div>
+									<div class="licenses-slider__slide swiper-slide">
+										<a
+											href="assets/img/docs1.jpg"
+											data-fancybox="group"
+											data-caption="This image has a caption 1"
+										>
+											<img src="assets/img/docs1.jpg" />
+										</a>
+									</div>
+									<div class="licenses-slider__slide swiper-slide">
+										<a
+											href="assets/img/docs1.jpg"
+											data-fancybox="group"
+											data-caption="This image has a caption 1"
+										>
+											<img src="assets/img/docs1.jpg" />
+										</a>
+									</div>
+									<div class="licenses-slider__slide swiper-slide">
+										<a
+											href="assets/img/docs1.jpg"
+											data-fancybox="group"
+											data-caption="This image has a caption 1"
+										>
+											<img src="assets/img/docs1.jpg" />
+										</a>
+									</div>
+									<div class="licenses-slider__slide swiper-slide">
+										<a
+											href="assets/img/docs1.jpg"
+											data-fancybox="group"
+											data-caption="This image has a caption 1"
+										>
+											<img src="assets/img/docs1.jpg" />
+										</a>
+									</div>
+									<div class="licenses-slider__slide swiper-slide">
+										<a
+											href="assets/img/docs1.jpg"
+											data-fancybox="group"
+											data-caption="This image has a caption 1"
+										>
+											<img src="assets/img/docs1.jpg" />
+										</a>
+									</div>
+									<div class="licenses-slider__slide swiper-slide">
+										<a
+											href="assets/img/docs1.jpg"
+											data-fancybox="group"
+											data-caption="This image has a caption 1"
+										>
+											<img src="assets/img/docs1.jpg" />
+										</a>
+									</div>
+									<div class="licenses-slider__slide swiper-slide">
+										<a
+											href="assets/img/docs1.jpg"
+											data-fancybox="group"
+											data-caption="This image has a caption 1"
+										>
+											<img src="assets/img/docs1.jpg" />
+										</a>
+									</div>
+									<div class="licenses-slider__slide swiper-slide">
+										<a
+											href="assets/img/docs1.jpg"
+											data-fancybox="group"
+											data-caption="This image has a caption 1"
+										>
+											<img src="assets/img/docs1.jpg" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="help">
+				<div class="container">
+					<div class="help__wrapper">
+						<div class="help__content">
+							<h2 class="help__title">Поможем в выборе!</h2>
+							<span class="help__span"
+								>У вас есть вопросы о формате обучения или вы не знаете какой
+								курс выбрать, оставьте свой номер - мы повоним, чтобы ответить
+								на все ваши вопросы.
+							</span>
+						</div>
+						<form action="" class="help__form">
+							<input type="text" class="help__input" placeholder="Имя" />
+							<input type="number" class="help__input" placeholder="Телефон" />
+							<input type="submit" value="ОТПРАВИТЬ" class="help__submit" />
+							<p class="help__text">
+								Нажимая на кнопку, я соглашаюсь на обработку персональных данных
+								и с правилами пользования Платформой
+							</p>
+						</form>
+					</div>
+				</div>
+			</section>
+			<div class="review">
+				<div class="container">
+					<div class="section-content">
+						<h2 class="section-content__title">ОТЗЫВЫ</h2>
+					</div>
+					<div class="review-slider swiper">
+						<div class="review-slider__wrapper swiper-wrapper">
+							<div class="review-slider__slide swiper-slide">
+								<div class="review-slider__img">
+									<img src="assets/img/review-img1.png" alt="" />
+								</div>
+								<span class="review-slider__span"
+									>Дистанционнон обучение открыло для меня новую жизнь!
+								</span>
+								<p class="review-slider__text">
+									Всегда хотела стать косметологом, но никак не решалась. И
+									совсем случайно я попала на рекламу вебинара по косметологии в
+									Обраовательном стандарте...
+								</p>
+								<a href="" class="review-slider__link main-btn main-btn_accent"
+									>Читать подробнее</a
+								>
+							</div>
+							<div class="review-slider__slide swiper-slide">
+								<div class="review-slider__img">
+									<img src="assets/img/review-img1.png" alt="" />
+								</div>
+								<span class="review-slider__span"
+									>Дистанционнон обучение открыло для меня новую жизнь!
+								</span>
+								<p class="review-slider__text">
+									Всегда хотела стать косметологом, но никак не решалась. И
+									совсем случайно я попала на рекламу вебинара по косметологии в
+									Обраовательном стандарте...
+								</p>
+								<a href="" class="review-slider__link main-btn main-btn_accent"
+									>Читать подробнее</a
+								>
+							</div>
+							<div class="review-slider__slide swiper-slide">
+								<div class="review-slider__img">
+									<img src="assets/img/review-img1.png" alt="" />
+								</div>
+								<span class="review-slider__span"
+									>Дистанционнон обучение открыло для меня новую жизнь!
+								</span>
+								<p class="review-slider__text">
+									Всегда хотела стать косметологом, но никак не решалась. И
+									совсем случайно я попала на рекламу вебинара по косметологии в
+									Обраовательном стандарте...
+								</p>
+								<a href="" class="review-slider__link main-btn main-btn_accent"
+									>Читать подробнее</a
+								>
+							</div>
+							<div class="review-slider__slide swiper-slide">
+								<div class="review-slider__img">
+									<img src="assets/img/review-img1.png" alt="" />
+								</div>
+								<span class="review-slider__span"
+									>Дистанционнон обучение открыло для меня новую жизнь!
+								</span>
+								<p class="review-slider__text">
+									Всегда хотела стать косметологом, но никак не решалась. И
+									совсем случайно я попала на рекламу вебинара по косметологии в
+									Обраовательном стандарте...
+								</p>
+								<a href="" class="review-slider__link main-btn main-btn_accent"
+									>Читать подробнее</a
+								>
+							</div>
+							<div class="review-slider__slide swiper-slide">
+								<div class="review-slider__img">
+									<img src="assets/img/review-img1.png" alt="" />
+								</div>
+								<span class="review-slider__span"
+									>Дистанционнон обучение открыло для меня новую жизнь!
+								</span>
+								<p class="review-slider__text">
+									Всегда хотела стать косметологом, но никак не решалась. И
+									совсем случайно я попала на рекламу вебинара по косметологии в
+									Обраовательном стандарте...
+								</p>
+								<a href="" class="review-slider__link main-btn main-btn_accent"
+									>Читать подробнее</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="clients">
+				<div class="container">
+					<div class="section-content">
+						<h2 class="section-content__title">Нас выбрали</h2>
+					</div>
+					<div class="clients-slider swiper">
+						<div class="swiper-wrapper">
+							<div class="clients-slider__item swiper-slide f-center-center">
+								<img src="assets/img/clients/clients-1.png" alt="" />
+							</div>
+							<div class="clients-slider__item swiper-slide f-center-center">
+								<img src="assets/img/clients/clients-2.png" alt="" />
+							</div>
+							<div class="clients-slider__item swiper-slide f-center-center">
+								<img src="assets/img/clients/clients-3.png" alt="" />
+							</div>
+							<div class="clients-slider__item swiper-slide f-center-center">
+								<img src="assets/img/clients/clients-4.png" alt="" />
+							</div>
+							<div class="clients-slider__item swiper-slide f-center-center">
+								<img src="assets/img/clients/clients-5.png" alt="" />
+							</div>
+							<div class="clients-slider__item swiper-slide f-center-center">
+								<img src="assets/img/clients/clients-6.png" alt="" />
+							</div>
+							<div class="clients-slider__item swiper-slide f-center-center">
+								<img src="assets/img/clients/clients-7.png" alt="" />
+							</div>
+							<div class="clients-slider__item swiper-slide f-center-center">
+								<img src="assets/img/clients/clients-8.png" alt="" />
+							</div>
+							<div class="clients-slider__item swiper-slide f-center-center">
+								<img src="assets/img/clients/clients-9.png" alt="" />
+							</div>
+							<div class="clients-slider__item swiper-slide f-center-center">
+								<img src="assets/img/clients/clients-10.png" alt="" />
+							</div>
+							<div class="clients-slider__item swiper-slide f-center-center">
+								<img src="assets/img/clients/clients-11.png" alt="" />
+							</div>
+							<div class="clients-slider__item swiper-slide f-center-center">
+								<img src="assets/img/clients/clients-12.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="connect">
+				<div class="container">
+					<div class="connect-wrapper f-jcsb">
+						<div class="connect__btn main-btn main-btn_accent">
+							Получить консультацию
+						</div>
+
+						<form method="post" action="/" class="connect-form">
+							<div class="connect-form__title">Нужна консультация?</div>
+							<p class="connect-form__text">
+								Оставьте свои данные, наши специалисты проконсультируют Вас
+							</p>
+							<div class="connect-form__wrapper">
+								<input type="hidden" name="user" value="1891" />
+								<input type="hidden" name="utm_source" value="" />
+								<input type="hidden" name="utm_medium" value="" />
+								<input type="hidden" name="utm_campaign" value="" />
+								<input type="hidden" name="utm_content" value="" />
+								<input type="hidden" name="utm_term" value="" />
+								<textarea
+									name="msg"
+									style="position: fixed; left: -9999px"
+								></textarea>
+								<div class="connect-form__item">
+									<input
+										type="text"
+										name="name"
+										placeholder="Имя"
+										required=""
+									/>
+								</div>
+								<div class="connect-form__item">
+									<input
+										type="tel"
+										name="phone"
+										placeholder="Телефон"
+										required=""
+									/>
+								</div>
+								<div class="connect-form__item">
+									<input
+										type="email"
+										name="email"
+										placeholder="E-mail"
+										required=""
+									/>
+								</div>
+								<div class="connect-form__item connect-form__item_select">
+									<select name="directions">
+										<option selected="" disabled="">
+											Какое направление Вас интересует?
+										</option>
+										<option value="Профессиональная переподготовка">
+											Профессиональная переподготовка
+										</option>
+										<option value="Повышение квалификации">
+											Повышение квалификации
+										</option>
+										<option value="НМО">НМО</option>
+										<option value="Охрана труда и ПТМ">
+											Охрана труда и ПТМ
+										</option>
+										<option value="Рабочие специальности">
+											Рабочие специальности
+										</option>
+										<option value="Метрология и стандартизация">
+											Метрология и стандартизация
+										</option>
+									</select>
+								</div>
+								<button
+									type="submit"
+									class="connect-form__submit main-btn main-btn_accent"
+								>
+									Получить консультацию
+								</button>
+								<div class="accept-politic">
+									<div class="accept-politic__label flex">
+										<div class="accept-politic__check f-center-center">
+											<svg
+												width="12"
+												height="9"
+												viewBox="0 0 12 9"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M11.0423 0.6875L4.2819 7.44792L1.20898 4.375"
+													stroke="white"
+													stroke-width="1.22917"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												></path>
+											</svg>
+										</div>
+										<p class="accept-politic__text">
+											Даю согласие на
+											<a href="#">обработку персональных данных</a> и
+											<a href="#">e-mail рассылку</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="bezvalue_wrap">
+								<input
+									class="bezvalue"
+									type="text"
+									name="bezvalue"
+									value=""
+									style="display: none"
+								/>
+							</div>
+
+							<input
+								type="hidden"
+								name="af_action"
+								value="85daf5595a6a5a122ce8dc76ab87dbbe"
+							/>
+						</form>
+						<div class="connect-map">
+							<iframe
+								src="https://yandex.ru/map-widget/v1/?um=constructor%3A6e4f960a485a6ee8d86745e5f05cd1255b2bbb7fcc0609ba74a2b2dbee3df49f&amp;source=constructor"
+								width="500"
+								height="500"
+							></iframe>
+						</div>
+					</div>
+					<div class="connect-review f-center-jcsb">
+						<div class="connect-review__title">Хотите оставить отзыв?</div>
+						<div class="connect-review__wrapper f-center">
+							<button
+								type="button"
+								class="connect-review__item consult-btn f-center-center"
+							>
+								<svg
+									width="22"
+									height="22"
+									viewBox="0 0 22 22"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M6 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V12C1 11.4696 1.21071 10.9609 1.58579 10.5858C1.96086 10.2107 2.46957 10 3 10H6M13 8V4C13 3.20435 12.6839 2.44129 12.1213 1.87868C11.5587 1.31607 10.7956 1 10 1L6 10V21H17.28C17.7623 21.0055 18.2304 20.8364 18.5979 20.524C18.9654 20.2116 19.2077 19.7769 19.28 19.3L20.66 10.3C20.7035 10.0134 20.6842 9.72068 20.6033 9.44225C20.5225 9.16382 20.3821 8.90629 20.1919 8.68751C20.0016 8.46873 19.7661 8.29393 19.5016 8.17522C19.2371 8.0565 18.9499 7.99672 18.66 8H13Z"
+										stroke="#009918"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									></path>
+								</svg>
+								Похвалить нас
+							</button>
+							<button
+								type="button"
+								class="
+									connect-review__item
+									consult-btn
+									connect-review__item_warn
+									f-center-center
+								"
+							>
+								<svg
+									width="25"
+									height="24"
+									viewBox="0 0 25 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M17.4991 1.99987H20.1691C20.735 1.98986 21.285 2.18801 21.7145 2.55669C22.144 2.92538 22.4232 3.43893 22.4991 3.99987V10.9999C22.4232 11.5608 22.144 12.0744 21.7145 12.4431C21.285 12.8117 20.735 13.0099 20.1691 12.9999H17.4991M10.4991 14.9999V18.9999C10.4991 19.7955 10.8151 20.5586 11.3777 21.1212C11.9403 21.6838 12.7034 21.9999 13.4991 21.9999L17.4991 12.9999V1.99987H6.21905C5.73673 1.99442 5.26868 2.16347 4.90115 2.47587C4.53362 2.78827 4.29138 3.22297 4.21905 3.69987L2.83905 12.6999C2.79555 12.9865 2.81488 13.2792 2.89571 13.5576C2.97655 13.8361 3.11695 14.0936 3.3072 14.3124C3.49744 14.5311 3.73297 14.7059 3.99748 14.8247C4.26199 14.9434 4.54915 15.0032 4.83905 14.9999H10.4991Z"
+										stroke="#A40D0D"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									></path>
+								</svg>
+								Поругать
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="credits">
+			<div class="credits-qr">
+				<div class="container">
+					<div class="credits-qr__wrapper f-center">
+						<div class="credits-qr__image">
+							<img src="assets/img/qr.png" alt="" />
+						</div>
+						<p class="credits-qr__text">
+							Для оплаты услуг через Систему быстрых платежей,<br />отсканируйте
+							QR-код в мобильном приложении банка или штатной камерой телефона
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="credits-main">
+				<div class="container">
+					<div class="credits-wrapper f-jcsb">
+						<nav class="credits-nav flex">
+							<div class="credits-point">
+								<div class="credits-point__item">
+									<div class="credits-point__title">Основное</div>
+									<div class="credits-point__dropdown">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="16"
+											height="16"
+											fill="#fff"
+											class="bi bi-caret-down-fill"
+											viewBox="0 0 16 16"
+										>
+											<path
+												d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+											/>
+										</svg>
+									</div>
+									<ul class="credits-menu">
+										<li class="credits-menu__item">
+											<a href="/uslugi" class="credits-menu__link"> Курсы </a>
+										</li>
+										<li class="credits-menu__item">
+											<a href="/liczenzii" class="credits-menu__link">
+												Лицензия
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a href="/klientu" class="credits-menu__link">
+												Обучающимся
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a href="#" class="credits-menu__link"> ЦЗН </a>
+										</li>
+										<li class="credits-menu__item">
+											<a
+												href="/klientu/skidki-i-akczii"
+												class="credits-menu__link"
+											>
+												Акции
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a href="/otzyivyi" class="credits-menu__link">
+												Наши выпускники
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a href="/kontaktyi" class="credits-menu__link">
+												Контакты
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="credits-point">
+								<div class="credits-point__item">
+									<div class="credits-point__title">Общие сведения</div>
+									<div class="credits-point__dropdown">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="16"
+											height="16"
+											fill="#fff"
+											class="bi bi-caret-down-fill"
+											viewBox="0 0 16 16"
+										>
+											<path
+												d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+											/>
+										</svg>
+									</div>
+									<ul class="credits-menu">
+										<li class="credits-menu__item">
+											<a href="osnovnyie-svedeniya" class="credits-menu__link">
+												Основные сведения
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a
+												href="struktura-i-organyi-upravleniya-obrazovatelnoj-organizacziej"
+												class="credits-menu__link"
+											>
+												Структура и органы управления образовательной
+												организацией
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a href="dokumentyi" class="credits-menu__link">
+												Документы
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a href="obrazovanie" class="credits-menu__link">
+												Образование
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a
+												href="rukovodstvo-i-pedagogicheskij-sostav"
+												class="credits-menu__link"
+											>
+												Руководство и педагогический состав
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a
+												href="materialno-texnicheskoe-obespechenie"
+												class="credits-menu__link"
+											>
+												Материально-техническое обеспечение
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a
+												href="platnyie-obrazovatelnyie-uslugi"
+												class="credits-menu__link"
+											>
+												Платные образовательные услуги
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a
+												href="finansovo-xozyajstvennaya-deyatelnost"
+												class="credits-menu__link"
+											>
+												Финансово-хозяйственная деятельность
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a href="vakansii" class="credits-menu__link">
+												Вакансии
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a
+												href="mezhdunarodnoe-sotrudnichestvo"
+												class="credits-menu__link"
+											>
+												Международное сотрудничество
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a href="dostupnaya-sreda" class="credits-menu__link">
+												Доступная среда
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a href="dostavka-i-oplata" class="credits-menu__link">
+												Доставка и оплата
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="credits-point">
+								<div class="credits-point__item">
+									<div class="credits-point__title">Услуги</div>
+									<div class="credits-point__dropdown">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="16"
+											height="16"
+											fill="#fff"
+											class="bi bi-caret-down-fill"
+											viewBox="0 0 16 16"
+										>
+											<path
+												d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+											/>
+										</svg>
+									</div>
+									<ul class="credits-menu">
+										<li class="credits-menu__item">
+											<a
+												href="uslugi/perepodgotovka"
+												class="credits-menu__link"
+											>
+												Профессиональная переподготовка
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a
+												href="uslugi/povyishenie-kvalifikacz"
+												class="credits-menu__link"
+											>
+												Повышение квалификации
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a
+												href="uslugi/oxrana-truda-i-pozharno-texnicheskij-minimum"
+												class="credits-menu__link"
+											>
+												Охрана труда и пожарно-технический минимум
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a
+												href="uslugi/rabochie-speczialnosti"
+												class="credits-menu__link"
+											>
+												Рабочие специальности
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a
+												href="uslugi/prochie-uslugi"
+												class="credits-menu__link"
+											>
+												Прочие услуги
+											</a>
+										</li>
+										<li class="credits-menu__item">
+											<a href="uslugi/nmo" class="credits-menu__link"> НМО </a>
+										</li>
+										<li class="credits-menu__item">
+											<a
+												href="uslugi/soprovozhdenie-akkreditaczii-medrabotnikov"
+												class="credits-menu__link"
+											>
+												Сопровождение аккредитации медработников
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<div
+							class="credits-info"
+							itemscope=""
+							itemtype="http://schema.org/Organization"
+						>
+							<meta itemprop="name" content="Образовательный стандарт" />
+							<div class="credits-info__title">Техническая поддержка:</div>
+							<a
+								href="tel:+74952121234"
+								class="credits-info__phone"
+								itemprop="telephone"
+							>
+								+7 (495) 212 12 34
+							</a>
+							<ul class="credits-social f-center">
+								<li class="credits-social__item">
+									<a
+										href="https://ok.ru/group/61058969698450"
+										class="credits-social__link"
+										target="_blank"
+									>
+										<img src="assets/img/ok-logo.svg" alt="" />
+									</a>
+								</li>
+								<li class="credits-social__item">
+									<a
+										href="https://vk.com/dpostandart"
+										class="credits-social__link"
+										target="_blank"
+									>
+										<img src="assets/img/vk-logo.svg" alt="" />
+									</a>
+								</li>
+								<li class="credits-social__item">
+									<a
+										href="https://t.me/+79255118067"
+										class="credits-social__link"
+										target="_blank"
+									>
+										<img src="assets/img/telegram-logo.svg" alt="" />
+									</a>
+								</li>
+								<li class="credits-social__item">
+									<a
+										href="https://wa.me/+79267204773"
+										class="credits-social__link"
+										target="_blank"
+									>
+										<img src="assets/img/whatsapp-logo.svg" alt="" />
+									</a>
+								</li>
+							</ul>
+							<div class="credits-info__title">Наш адрес:</div>
+							<p
+								class="credits-info__text"
+								itemprop="address"
+								itemscope=""
+								itemtype="http://schema.org/PostalAddress"
+							>
+								115230, Москва, Варшавское шоссе 42
+							</p>
+							<div class="credits-info__title">Наш адрес:</div>
+							<a
+								href="mailto:info@dpostandart.ru"
+								class="credits-info__text credits-info__text_link"
+							>
+								info@dpostandart.ru
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="credits-licenses">
+				<div class="container flex">
+					<div class="credits-check">
+						<p class="credits-check__title">Образовательная лицензия</p>
+						<a
+							href="https://data.mos.ru/opendata/7719028495-reestr-litsenziy-na-obrazovatelnuyu-deyatelnost-vydannyh-organami-ispolnitelnoy-vlasti"
+							class="credits-check__link"
+							target="_blank"
+						>
+							Проверить лицензию
+						</a>
+					</div>
+					<div class="credits-rec">
+						<div class="credits-rec__title">Юридическая информация</div>
+						<p class="credits-rec__text">
+							Р/c № 40702810302360001688 в<br />
+							АО "АЛЬФА-БАНК"<br />
+							к/c 30101810200000000593<br />
+							БИК 044525593<br />
+							ИНН 7725289953<br />
+							ОГРН 1157746882182
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="credits-politic">
+				<div class="container">
+					<div class="credits-politic__wrapper">
+						<a
+							href="/politika-konfidenczialnosti"
+							class="credits-politic__link"
+						>
+							Политика конфиденциальности
+						</a>
+						<a
+							href="/soglasie-na-poluchenie-reklamnyix-rassyilok"
+							class="credits-politic__link"
+						>
+							Согласие на получение рассылок
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- popup -->
+		<div class="popup connect-popup">
+			<div class="popup-overlay">
+				<div class="popup-body">
+					<div class="popup-wrap">
+						<div class="popup-close f-center-center">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M18 6L6 18"
+									stroke="black"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+								<path
+									d="M6 6L18 18"
+									stroke="black"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></path>
+							</svg>
+						</div>
+						<form
+							method="post"
+							action="/"
+							class="connect-form comagic-connect ajax_form"
+							onsubmit="ym(56296366,'reachGoal','otpravka_zayavki'); return true;"
+						>
+							<div class="connect-form__title">Нужна консультация?</div>
+							<p class="connect-form__text">
+								Оставьте свои данные, наши специалисты проконсультируют Вас
+							</p>
+							<div class="connect-form__wrapper">
+								<input type="hidden" name="user" value="1891" />
+								<input type="hidden" name="utm_source" value="" />
+								<input type="hidden" name="utm_medium" value="" />
+								<input type="hidden" name="utm_campaign" value="" />
+								<input type="hidden" name="utm_content" value="" />
+								<input type="hidden" name="utm_term" value="" />
+								<textarea
+									name="msg"
+									style="position: fixed; left: -9999px"
+								></textarea>
+								<input type="hidden" name="info" />
+								<div class="connect-form__item">
+									<input
+										type="text"
+										name="name"
+										placeholder="Имя"
+										required=""
+									/>
+								</div>
+								<div class="connect-form__item">
+									<input
+										type="tel"
+										name="phone"
+										placeholder="Телефон"
+										required=""
+									/>
+								</div>
+								<div class="connect-form__item">
+									<input
+										type="email"
+										name="email"
+										placeholder="E-mail"
+										required=""
+									/>
+								</div>
+								<div class="connect-form__item connect-form__item_select">
+									<select name="directions">
+										<option selected="" disabled="">
+											Какое направление Вас интересует?
+										</option>
+										<option value="Профессиональная переподготовка">
+											Профессиональная переподготовка
+										</option>
+										<option value="Повышение квалификации">
+											Повышение квалификации
+										</option>
+										<option value="НМО">НМО</option>
+										<option value="Охрана труда и ПТМ">
+											Охрана труда и ПТМ
+										</option>
+										<option value="Рабочие специальности">
+											Рабочие специальности
+										</option>
+										<option value="Метрология и стандартизация">
+											Метрология и стандартизация
+										</option>
+									</select>
+								</div>
+								<button
+									type="submit"
+									class="connect-form__submit main-btn main-btn_accent"
+								>
+									Получить консультацию
+								</button>
+								<div class="accept-politic">
+									<div class="accept-politic__label flex active">
+										<div class="accept-politic__check f-center-center">
+											<svg
+												width="12"
+												height="9"
+												viewBox="0 0 12 9"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M11.0423 0.6875L4.2819 7.44792L1.20898 4.375"
+													stroke="white"
+													stroke-width="1.22917"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												></path>
+											</svg>
+										</div>
+										<p class="accept-politic__text">
+											Даю согласие на
+											<a href="/politika-konfidenczialnosti"
+												>обработку персональных данных</a
+											>
+											и <a href="#">e-mail рассылку</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="bezvalue_wrap">
+								<input
+									class="bezvalue"
+									type="text"
+									name="bezvalue"
+									value=""
+									style="display: none"
+								/>
+							</div>
+
+							<input
+								type="hidden"
+								name="af_action"
+								value="c8265a8c182dbc11e409e14d4555db1e"
+							/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- fancybox -->
+		<div class="show-youtube">
+			<div class="show-youtube__close" onclick="closeYoutube()">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="32"
+					height="32"
+					fill="#fff"
+					class="bi bi-x-square-fill"
+					viewBox="0 0 16 16"
+				>
+					<path
+						d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"
+					/>
+				</svg>
+			</div>
+			<iframe
+				width="1024"
+				height="576"
+				src="https://www.youtube.com/embed/udyJU-7JYkc"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen
+			></iframe>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
