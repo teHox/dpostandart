@@ -30,51 +30,52 @@ label.addEventListener("click", () => {
 
 const footerPoint = document.querySelectorAll(".credits-point");
 
-footerPoint.forEach((e)=>{
+footerPoint.forEach((e) => {
 	const dropdown = e.querySelector(".credits-point__dropdown");
 	const footerMenu = e.querySelector(".credits-menu");
 
-	e.addEventListener("click", ()=>{
+	e.addEventListener("click", () => {
 		dropdown.classList.toggle("credits-point__dropdown_active");
-		footerMenu.classList.toggle("credits-menu_active")
-	})
-})
+		footerMenu.classList.toggle("credits-menu_active");
+	});
+});
+
+// spoilers
+
+const spoilers = document.querySelectorAll(".spoilers__item");
+
+spoilers.forEach((e) => {
+	const spoilerOpen = e.querySelector(".spoilers__open");
+
+	e.addEventListener("click", () => {
+		e.classList.toggle("spoilers__item_active");
+		spoilerOpen.classList.toggle("spoilers__open_active");
+	});
+});
 
 // fancybox
 
-const openFancy = document.querySelector(".about-block__video");
+const openFancy = document.querySelectorAll(".open-video");
 const showYoutube = document.querySelector(".show-youtube");
 const closeFancy = document.querySelector(".show-youtube__close");
 
-function openYoutube() {
-	openFancy.addEventListener("click", () => {
+openFancy.forEach((e) => {
+	e.addEventListener("click", () => {
 		showYoutube.classList.add("show-youtube_active");
 	});
-}
+});
+
+// function openYoutube() {
+// 	openFancy.addEventListener("click", () => {
+// 		showYoutube.classList.add("show-youtube_active");
+// 	});
+// }
 
 function closeYoutube() {
 	closeFancy.addEventListener("click", () => {
 		showYoutube.classList.remove("show-youtube_active");
 	});
 }
-
-// popup open
-
-const connectBtn = document.querySelector(".connect__btn");
-const connectPopup = document.querySelector(".connect-popup");
-
-connectBtn.addEventListener("click", () => {
-	connectPopup.classList.add("popup_active");
-});
-
-// popup close
-
-const popup = document.querySelector(".popup");
-const popupClose = document.querySelector(".popup-close");
-
-popupClose.addEventListener("click", () => {
-	popup.classList.remove("popup_active");
-});
 
 // sliders
 
@@ -178,6 +179,8 @@ function licenceSliderInit() {
 	});
 }
 
+licenceSliderInit();
+
 const reviewSlider = new Swiper(".review-slider", {
 	breakpoints: {
 		1100: {
@@ -224,60 +227,22 @@ const clientsSlider = new Swiper(".clients-slider", {
 	},
 });
 
-licenceSliderInit();
+function chooseUsSliderInit() {
+	const popUpRefLeft = document.querySelector(".choose-us__prev");
 
-// tabs
+	const popUpRefRight = document.querySelector(".choose-us__next");
 
-class ItcTabs {
-	constructor(target, config) {
-		const defaultConfig = {};
-		this._config = Object.assign(defaultConfig, config);
-		this._elTabs =
-			typeof target === "string" ? document.querySelector(target) : target;
-		this._elButtons = this._elTabs.querySelectorAll(".tabs__btn");
-		this._elPanes = this._elTabs.querySelectorAll(".tabs__pane");
-		this._eventShow = new Event("tab.itc.change");
-		this._init();
-		this._events();
-	}
-	_init() {
-		this._elTabs.setAttribute("role", "tablist");
-		this._elButtons.forEach((el, index) => {
-			el.dataset.index = index;
-			el.setAttribute("role", "tab");
-			this._elPanes[index].setAttribute("role", "tabpanel");
-		});
-	}
-	show(elLinkTarget) {
-		const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
-		const elLinkActive = this._elTabs.querySelector(".tabs__btn_active");
-		const elPaneShow = this._elTabs.querySelector(".tabs__pane_show");
-		if (elLinkTarget === elLinkActive) {
-			return;
-		}
-		elLinkActive ? elLinkActive.classList.remove("tabs__btn_active") : null;
-		elPaneShow ? elPaneShow.classList.remove("tabs__pane_show") : null;
-		elLinkTarget.classList.add("tabs__btn_active");
-		elPaneTarget.classList.add("tabs__pane_show");
-		this._elTabs.dispatchEvent(this._eventShow);
-		elLinkTarget.focus();
-	}
-	showByIndex(index) {
-		const elLinkTarget = this._elButtons[index];
-		elLinkTarget ? this.show(elLinkTarget) : null;
-	}
-	_events() {
-		this._elTabs.addEventListener("click", (e) => {
-			const target = e.target.closest(".tabs__btn");
-			if (target) {
-				e.preventDefault();
-				this.show(target);
-			}
-		});
-	}
+	const chooseUsSlider = new Swiper(".choose-us-slider", {
+		slidesPerView: 1,
+		navigation: {
+			nextEl: popUpRefRight,
+			prevEl: popUpRefLeft,
+		},
+	});
 }
 
-new ItcTabs(".tabs");
+chooseUsSliderInit();
+
 
 // jQuery...
 

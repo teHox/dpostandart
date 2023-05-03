@@ -157,7 +157,7 @@
 					<div class="header-inner f-center-jcsb">
 						<div class="header-inner__wrap f-center">
 							<div class="header-logo f-center-center">
-								<a href="/" class="header-logo__link">
+								<a href="index.html" class="header-logo__link">
 									<img src="assets/img/logo.png" alt="" />
 								</a>
 							</div>
@@ -188,13 +188,15 @@
 										<a href="/" class="header-menu__link"> КУРСЫ </a>
 									</li>
 									<li class="header-menu__item">
-										<a href="/" class="header-menu__link"> ВЕБИНАРЫ </a>
+										<a href="webinars.html" class="header-menu__link">
+											ВЕБИНАРЫ
+										</a>
 									</li>
 									<li class="header-menu__item">
 										<a href="/" class="header-menu__link"> СОТРУДНИЧЕСТВО </a>
 									</li>
 									<li class="header-menu__item">
-										<a href="/" class="header-menu__link"> ЛЕНТА </a>
+										<a href="tape.html" class="header-menu__link"> ЛЕНТА </a>
 									</li>
 									<li class="header-menu__item">
 										<a href="/" class="header-menu__link"> КОНТАКТЫ </a>
@@ -222,10 +224,7 @@
 						<div class="header-wrapper__bottom">
 							<div class="header-category f-center-jcsb">
 								<div class="header-category__item">
-									<a
-										href="/uslugi/perepodgotovka"
-										class="header-category__link"
-									>
+									<a href="retraining.html" class="header-category__link">
 										Профессиональная переподготовка
 									</a>
 								</div>
@@ -850,7 +849,7 @@
 								<div class="about-block__logo">
 									<img src="assets/img/about-logo.png" alt="" />
 								</div>
-								<button onclick="openYoutube()" class="about-block__video">
+								<button class="about-block__video open-video">
 									<img src="assets/img/about-video.png" alt="" />
 								</button>
 							</div>
@@ -1162,30 +1161,36 @@
 							<div class="licenses-inner__buttons">
 								<div class="licenses-inner__prev">
 									<svg
-										xmlns="http://www.w3.org/2000/svg"
 										width="38"
 										height="38"
-										fill="currentColor"
-										class="bi bi-arrow-left-circle-fill"
-										viewBox="0 0 16 16"
+										viewBox="0 0 38 38"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
 									>
+										<circle cx="19" cy="19" r="19" fill="#172A6C"></circle>
 										<path
-											d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
-										/>
+											d="M14.2929 18.2929C13.9024 18.6834 13.9024 19.3166 14.2929 19.7071L20.6569 26.0711C21.0474 26.4616 21.6805 26.4616 22.0711 26.0711C22.4616 25.6805 22.4616 25.0474 22.0711 24.6569L16.4142 19L22.0711 13.3431C22.4616 12.9526 22.4616 12.3195 22.0711 11.9289C21.6805 11.5384 21.0474 11.5384 20.6569 11.9289L14.2929 18.2929ZM16 18L15 18L15 20L16 20L16 18Z"
+											fill="white"
+										></path>
 									</svg>
 								</div>
 								<div class="licenses-inner__next">
 									<svg
-										xmlns="http://www.w3.org/2000/svg"
 										width="38"
 										height="38"
-										fill="currentColor"
-										class="bi bi-arrow-right-circle-fill"
-										viewBox="0 0 16 16"
+										viewBox="0 0 38 38"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
 									>
+										<circle
+											r="19"
+											transform="matrix(-1 0 0 1 19 19)"
+											fill="#172A6C"
+										></circle>
 										<path
-											d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
-										/>
+											d="M23.7071 18.2929C24.0976 18.6834 24.0976 19.3166 23.7071 19.7071L17.3431 26.0711C16.9526 26.4616 16.3195 26.4616 15.9289 26.0711C15.5384 25.6805 15.5384 25.0474 15.9289 24.6569L21.5858 19L15.9289 13.3431C15.5384 12.9526 15.5384 12.3195 15.9289 11.9289C16.3195 11.5384 16.9526 11.5384 17.3431 11.9289L23.7071 18.2929ZM22 18L23 18L23 20L22 20L22 18Z"
+											fill="white"
+										></path>
 									</svg>
 								</div>
 							</div>
@@ -1318,7 +1323,7 @@
 						</div>
 						<form action="" class="help__form">
 							<input type="text" class="help__input" placeholder="Имя" />
-							<input type="number" class="help__input" placeholder="Телефон" />
+							<input type="tel" class="help__input" placeholder="Телефон" />
 							<input type="submit" value="ОТПРАВИТЬ" class="help__submit" />
 							<p class="help__text">
 								Нажимая на кнопку, я соглашаюсь на обработку персональных данных
@@ -1328,7 +1333,7 @@
 					</div>
 				</div>
 			</section>
-			<div class="review">
+			<section class="review">
 				<div class="container">
 					<div class="section-content">
 						<h2 class="section-content__title">ОТЗЫВЫ</h2>
@@ -1418,7 +1423,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 			<section class="clients">
 				<div class="container">
 					<div class="section-content">
@@ -1466,10 +1471,10 @@
 					</div>
 				</div>
 			</section>
-			<div class="connect">
+			<section class="connect">
 				<div class="container">
 					<div class="connect-wrapper f-jcsb">
-						<div class="connect__btn main-btn main-btn_accent">
+						<div id="connect-btn" class="consult-btn main-btn main-btn_accent">
 							Получить консультацию
 						</div>
 
@@ -1646,7 +1651,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		</main>
 		<footer class="credits">
 			<div class="credits-qr">
@@ -2190,6 +2195,8 @@
 			></iframe>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+		<script src="assets/js/tabs.js"></script>
+		<script src="assets/js/popup.js"></script>
 		<script src="assets/js/script.js"></script>
 	</body>
 </html>
