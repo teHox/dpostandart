@@ -53,6 +53,18 @@ spoilers.forEach((e) => {
 	});
 });
 
+// desc-course spoilers
+
+const descCourseSpoilers = document.querySelectorAll(".desc-course__item");
+
+descCourseSpoilers.forEach((e) => {
+	const descCourseOpen = e.querySelector(".desc-course__open");
+	e.addEventListener("click", () => {
+		e.classList.toggle("desc-course__item_active");
+		descCourseOpen.classList.toggle("desc-course__open_active");
+	});
+});
+
 // fancybox
 
 const openFancy = document.querySelectorAll(".open-video");

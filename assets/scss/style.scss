@@ -2445,6 +2445,70 @@ main {
 	}
 }
 
+.enroll {
+	padding: 20px 0;
+	form {
+		padding: 0;
+	}
+	.consult-form__wrapper {
+		padding: 30px 20px;
+		width: 100%;
+	}
+	.consult-form__title {
+		max-width: unset;
+	}
+	.connect-form__item,
+	.connect-form__submit {
+		flex-basis: 24%;
+	}
+	.connect-form__submit {
+		padding: 20px 0;
+	}
+	@media screen and(max-width:900px) {
+		.consult-form__row {
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+		.connect-form__item {
+			flex-basis: 30%;
+			margin-right: 0;
+		}
+		.connect-form__submit {
+			max-width: unset !important;
+			flex-basis: 100%;
+		}
+	}
+	@media screen and(max-width:768px) {
+		.consult-form {
+			display: block;
+		}
+		.consult-form__title {
+			font-size: 20px;
+		}
+		.connect-form__item {
+			input {
+				padding: 14px;
+				font-size: 14px;
+			}
+		}
+		.connect-form__submit {
+			padding: 14px 0;
+		}
+		.accept-politic__text {
+			font-size: 12px;
+		}
+	}
+	@media screen and(max-width:550px) {
+		.consult-form__title {
+			font-size: 20px;
+			line-height: unset;
+		}
+		.connect-form__item {
+			flex-basis: 100%;
+		}
+	}
+}
+
 // 																	PARAGRAPH
 
 .paragraph {
@@ -2462,6 +2526,19 @@ main {
 		line-height: 42px;
 		margin-bottom: 35px;
 	}
+	&__text {
+		b {
+			margin-bottom: 20px;
+			line-height: 40px;
+		}
+		p {
+			margin-left: 20px;
+			line-height: 40px;
+		}
+		&_mb {
+			margin-bottom: 20px;
+		}
+	}
 	&__text,
 	&__li {
 		font-family: "Inter";
@@ -2475,6 +2552,12 @@ main {
 	@media screen and(max-width:768px) {
 		&__title {
 			font-size: 20px;
+		}
+		&__text {
+			b,
+			p {
+				line-height: 20px;
+			}
 		}
 		&__text,
 		&__li {
@@ -2572,7 +2655,11 @@ main {
 
 .catalog {
 	padding-bottom: 35px;
+	h2 {
+		text-align: center;
+	}
 	&__wrapper {
+		margin-top: 20px;
 		width: 100%;
 		@include flex(space-between, $align-items: baseline);
 		gap: 10px;
@@ -2853,6 +2940,378 @@ main {
 		&__top {
 			flex-direction: column;
 			gap: 10px;
+		}
+	}
+}
+.courses {
+	&__banner {
+		position: relative;
+		max-height: 146px;
+		height: 100%;
+		width: 100%;
+		margin-top: 20px;
+		border-radius: 20px;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			max-height: 146px;
+		}
+		@media screen and(max-width:768px) {
+			height: 80px;
+		}
+	}
+	&__title {
+		@include flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(23, 42, 108, 0.67);
+		font-family: "Inter";
+		font-weight: 400;
+		font-size: 45px;
+		color: #fff;
+		@media screen and(max-width:768px) {
+			font-size: 20px;
+		}
+	}
+	&__content {
+		display: flex;
+		flex: 1;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+	&__right,
+	&__left {
+		flex-basis: 48%;
+	}
+	&__img {
+		@include flex;
+		max-width: 24px;
+		width: 100%;
+		max-height: 24px;
+		height: 100%;
+		border-radius: 8px;
+		background: #c8c8c8;
+		margin-bottom: 5px;
+		img,
+		svg {
+			width: 60%;
+			height: 60%;
+		}
+	}
+	&__text {
+		font-family: "Inter";
+		font-weight: 300;
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+	&__span {
+		display: block;
+		font-family: "Inter";
+		font-weight: 500;
+		font-size: 12px;
+	}
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+	}
+	&__btn {
+		flex-basis: 48%;
+		padding: 6px 15px;
+		font-family: "Inter";
+		font-weight: 300;
+		font-size: 13px;
+	}
+	@media screen and(max-width:1200px) {
+		.catalog__item {
+			justify-content: space-between;
+		}
+		.catalog__right {
+			max-width: 210px;
+			width: 100%;
+		}
+		&__content {
+			flex-direction: column;
+			gap: 20px;
+		}
+		&__buttons {
+			flex-direction: column;
+		}
+		&__btn {
+			flex-basis: 100%;
+			width: 100%;
+		}
+	}
+	@media screen and(max-width:768px) {
+		.catalog__right {
+			max-width: 370px;
+			width: 100%;
+		}
+		&__content {
+			flex-direction: row;
+		}
+		&__buttons {
+			flex-direction: row;
+		}
+		&__btn {
+			flex-basis: 48%;
+			width: 100%;
+		}
+	}
+	@media screen and(max-width:600px) {
+		&__content {
+			flex-direction: column;
+		}
+		&__buttons {
+			flex-direction: column;
+		}
+		&__btn {
+			flex-basis: 100%;
+			width: 100%;
+		}
+	}
+	@media screen and(max-width:500px) {
+		&__text,
+		&__span {
+			text-align: left;
+		}
+	}
+}
+
+// 																	SCHEDULE
+
+.schedule {
+	h2 {
+		text-align: center;
+	}
+	&__wrapper {
+		margin-top: 20px;
+		width: 100%;
+		padding: 35px 50px 30px 55px;
+		background: #ffffff;
+		box-shadow: 0px 4px 4px rgba(23, 42, 108, 0.48);
+		border-radius: 15px;
+	}
+	&__item {
+		display: flex;
+		gap: 30px;
+		align-items: center;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__img {
+		max-width: 35px;
+		max-height: 35px;
+		width: 100%;
+		img,
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__text {
+		font-family: "Inter";
+		font-weight: 300;
+		font-size: 24px;
+		color: #172a6c;
+	}
+	@media screen and(max-width:768px) {
+		&__wrapper {
+			padding: 15px 20px 20px 25px;
+		}
+		&__item {
+			gap: 12px;
+		}
+		&__img {
+			max-width: 20px;
+			max-height: 20px;
+		}
+		&__text {
+			font-size: 18px;
+		}
+	}
+}
+
+// 																	DESC COURSE
+
+.desc-course {
+	h2 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&__wrapper {
+		background: #f7f7f7;
+		padding: 20px 0;
+	}
+	&__item {
+		padding: 0 20px;
+		background: #f1f1f1;
+		border-radius: 10px;
+		cursor: pointer;
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&_active {
+			p {
+				max-height: 300px;
+				padding: 0 0 20px 0;
+			}
+		}
+	}
+	&__top {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 0;
+	}
+	&__name,
+	&__open {
+		font-family: "Inter";
+		font-weight: 300;
+		font-size: 18px;
+	}
+	&__open {
+		font-weight: 500;
+		&::before {
+			content: "Развернуть";
+			@include transition;
+		}
+		&_active {
+			&::before {
+				content: "Свернуть";
+			}
+		}
+	}
+	&__text {
+		font-family: "Inter";
+		font-weight: 300;
+		font-size: 16px;
+		max-height: 0;
+		@include transition;
+		overflow: hidden;
+	}
+	@media screen and(max-width:768px) {
+		&__name,
+		&__open {
+			font-size: 16px;
+		}
+		&__text {
+			font-size: 14px;
+		}
+	}
+}
+
+// 																	SYLLABUS
+
+.syllabus {
+	padding: 30px 0;
+	h2 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&__btn {
+		padding: 25px;
+		display: flex;
+		border-radius: 12px;
+		margin-left: auto;
+		gap: 15px;
+		margin-bottom: 25px;
+	}
+	&__list {
+		background: #fbfbfb;
+		border: 2px solid #ebebeb;
+		border-radius: 12px;
+	}
+	&__item {
+		padding: 32px 24px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		justify-content: space-between;
+		&:nth-child(2n + 2) {
+			background: #eff1f7;
+		}
+	}
+	&__title,
+	&__text {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+	}
+	@media screen and(max-width:768px){
+		&__btn {
+			padding: 12px;
+			font-size: 16px;
+		}
+		&__item {
+			padding: 20px 10px;
+		}
+		&__title,
+		&__text {
+			font-size: 16px;
+		}
+	}
+	@media screen and(max-width:500px){
+		&__title,
+		&__text {
+			font-weight: 300;
+			font-size: 14px;
+		}
+	}
+}
+
+// 																	CONDITION
+
+.condition {
+	padding: 20px 0;
+	h2 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&__wrapper {
+		padding: 50px 20px;
+		background: #f7f7f7;
+		border-radius: 20px;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+	&__check {
+		background: #172a6c;
+		border-radius: 10px;
+		@include flex;
+		width: 40px;
+		height: 40px;
+	}
+	&__text {
+		font-family: "Inter";
+		font-weight: 300;
+		font-size: 24px;
+	}
+	@media screen and(max-width:768px) {
+		&__wrapper {
+			padding: 20px;
+		}
+		&__check {
+			width: 30px;
+			height: 30px;
+			svg {
+				width: 14px;
+				height: 14px;
+			}
+		}
+		&__text {
+			font-size: 18px;
 		}
 	}
 }
