@@ -17,6 +17,14 @@ burgerBtn.addEventListener("click", () => {
 	headerMenu.classList.toggle("active");
 });
 
+const burgerClose = document.querySelector(".burger-close");
+
+burgerClose.addEventListener("click", () => {
+	burgerBtn.classList.remove("burger-btn_active");
+	headerMenu.classList.remove("active");
+});
+
+
 // checkbox in connect-form
 
 const label = document.querySelector(".accept-politic__label");
